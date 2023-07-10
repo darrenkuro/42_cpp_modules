@@ -6,23 +6,22 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 13:24:12 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 04:38:49 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/11 08:51:25 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <cctype>
 #include <iostream>
-#include <string>
 
-const std::string DEFAULT_MSG = "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+std::string const DEFAULT_MSG = "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 
 /* Change entire string to upper cases. */
 std::string ft_toupper(char *str) {
-    std::string ret = str;
+    std::string upper = str;
 
-    for (int i = 0; i < (int)ret.size(); i++)
-        ret[i] = std::toupper(str[i]);
-    return ret;
+    for (int i = 0; i < (int)upper.size(); i++)
+        upper[i] = std::toupper(str[i]);
+    return upper;
 }
 
 int main(int ac, char **av) {
