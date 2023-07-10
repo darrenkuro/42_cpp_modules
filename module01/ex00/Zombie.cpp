@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 11:22:26 by dlu               #+#    #+#             */
-/*   Updated: 2023/05/29 11:27:54 by dlu              ###   ########.fr       */
+/*   Created: 2023/07/11 04:38:28 by dlu               #+#    #+#             */
+/*   Updated: 2023/07/11 07:34:16 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-#include "Contact.hpp"
-#define MAX_CONTACT 8
+Zombie::Zombie(std::string name) : _name(name) {}
+Zombie::~Zombie() {
+    std::cout << "Zombie " << _name << " was destoryed." << std::endl;
+}
 
-class PhoneBook {
-private:
-  Contact _contacts[MAX_CONTACT];
-};
-
-#endif // PHONEBOOK_HPP
+void Zombie::announce(void) {
+    std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}

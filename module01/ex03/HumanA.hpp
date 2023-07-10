@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 11:22:26 by dlu               #+#    #+#             */
-/*   Updated: 2023/05/29 11:27:54 by dlu              ###   ########.fr       */
+/*   Created: 2023/07/11 07:00:15 by dlu               #+#    #+#             */
+/*   Updated: 2023/07/11 07:33:55 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
-#include "Contact.hpp"
-#define MAX_CONTACT 8
+#include "Weapon.hpp"
+class HumanA {
+  public:
+    HumanA(std::string name, Weapon &weapon);
+    ~HumanA();
+    void attack(void) const;
 
-class PhoneBook {
-private:
-  Contact _contacts[MAX_CONTACT];
+  private:
+    std::string _name;
+    Weapon &_weapon;
 };
 
-#endif // PHONEBOOK_HPP
+#endif // HUMANA_HPP

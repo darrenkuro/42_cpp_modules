@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 11:22:26 by dlu               #+#    #+#             */
-/*   Updated: 2023/05/29 11:27:54 by dlu              ###   ########.fr       */
+/*   Created: 2023/07/11 07:04:12 by dlu               #+#    #+#             */
+/*   Updated: 2023/07/11 07:49:59 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
-#include "Contact.hpp"
-#define MAX_CONTACT 8
+#include <iostream>
 
-class PhoneBook {
-private:
-  Contact _contacts[MAX_CONTACT];
+class Weapon {
+  public:
+    Weapon(std::string type);
+    ~Weapon();
+    std::string const &getType(void) const;
+    void setType(std::string type);
+
+  private:
+    std::string _type;
 };
 
-#endif // PHONEBOOK_HPP
+#endif // WEAPON_HPP

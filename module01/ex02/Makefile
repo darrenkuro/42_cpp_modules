@@ -5,30 +5,28 @@
 #                                                     +:+ +:+         +:+      #
 #    By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/05/28 12:05:51 by dlu               #+#    #+#              #
-#    Updated: 2023/07/10 16:29:01 by dlu              ###   ########.fr        #
+#    Created: 2023/07/11 06:44:00 by dlu               #+#    #+#              #
+#    Updated: 2023/07/11 06:51:17 by dlu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:=	PhoneBook
-SRC		:=	PhoneBook.cpp Contact.cpp main.cpp
+NAME	:=	String
+SRC		:=	main.cpp
 CC		:=	c++
-CFLAG	:=	-Wall -Wextra -Werror -std=c++98
-RM		:=	/bin/rm -rf
 
+CFLAGS	:=	-Wall -Wextra -Werror -std=c++98
+RM		:=	/bin/rm -rf
 OBJDIR	:=	objs
 OBJ		:=	$(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
-
-HEADER	:=	PhoneBook.hpp Contact.hpp
 
 .phony: all clean fclean re
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(HEADER)
+$(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
 
-$(OBJDIR)/%.o: %.cpp $(HEADER)
+$(OBJDIR)/%.o: %.cpp
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 

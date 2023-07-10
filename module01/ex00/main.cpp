@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 11:22:26 by dlu               #+#    #+#             */
-/*   Updated: 2023/05/29 11:27:54 by dlu              ###   ########.fr       */
+/*   Created: 2023/07/11 04:42:58 by dlu               #+#    #+#             */
+/*   Updated: 2023/07/11 04:49:04 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-#include "Contact.hpp"
-#define MAX_CONTACT 8
+int main(void) {
+    std::cout << "Calling randomChump" << std::endl;
+    randomChump("chump");
 
-class PhoneBook {
-private:
-  Contact _contacts[MAX_CONTACT];
-};
+    std::cout << "Calling new zombie (heap allocation)" << std::endl;
+    Zombie *darren = newZombie("Darren");
+    darren->announce();
+    delete darren;
 
-#endif // PHONEBOOK_HPP
+    return EXIT_SUCCESS;
+}

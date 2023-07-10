@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 11:22:26 by dlu               #+#    #+#             */
-/*   Updated: 2023/05/29 11:27:54 by dlu              ###   ########.fr       */
+/*   Created: 2023/07/11 04:42:58 by dlu               #+#    #+#             */
+/*   Updated: 2023/07/11 07:34:43 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-#include "Contact.hpp"
-#define MAX_CONTACT 8
+int main(void) {
+    int count = 5;
 
-class PhoneBook {
-private:
-  Contact _contacts[MAX_CONTACT];
-};
-
-#endif // PHONEBOOK_HPP
+    Zombie *horde = zombieHorde(count, "Darren");
+    for (int i = 0; i < count; i++) {
+        std::cout << "[Zombie " << i << "] ";
+        horde[i].announce();
+    }
+    delete[] horde;
+    return EXIT_SUCCESS;
+}
