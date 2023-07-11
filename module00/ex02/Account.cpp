@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 13:48:15 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/12 02:22:50 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/12 02:38:37 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Account::Account(int initial_deposit) {
               << "created" << std::endl;
 }
 
-Account::Account(void) { Account(0); }
+Account::Account() { Account(0); }
 
 /* Destructor. */
 Account::~Account(void) {
