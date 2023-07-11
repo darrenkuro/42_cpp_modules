@@ -6,11 +6,11 @@
 #    By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/10 16:29:29 by dlu               #+#    #+#              #
-#    Updated: 2023/07/11 04:52:04 by dlu              ###   ########.fr        #
+#    Updated: 2023/07/11 12:05:14 by dlu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:=	Zombie
+NAME	:=	zombie
 SRC		:=	main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 HEADER	:=	Zombie.hpp
 

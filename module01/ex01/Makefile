@@ -6,11 +6,11 @@
 #    By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/10 16:29:29 by dlu               #+#    #+#              #
-#    Updated: 2023/07/11 04:53:57 by dlu              ###   ########.fr        #
+#    Updated: 2023/07/11 12:06:20 by dlu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:=	Zombie
+NAME	:=	zombie
 SRC		:=	main.cpp Zombie.cpp zombieHorde.cpp
 HEADER	:=	Zombie.hpp
 

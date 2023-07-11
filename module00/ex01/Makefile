@@ -6,11 +6,11 @@
 #    By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/28 12:05:51 by dlu               #+#    #+#              #
-#    Updated: 2023/07/11 09:58:23 by dlu              ###   ########.fr        #
+#    Updated: 2023/07/11 12:05:51 by dlu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:=	PhoneBook
+NAME	:=	phonebook
 SRC		:=	PhoneBook.cpp Contact.cpp main.cpp
 HEADER	:=	PhoneBook.hpp Contact.hpp
 

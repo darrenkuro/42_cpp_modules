@@ -6,11 +6,11 @@
 #    By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/28 12:05:51 by dlu               #+#    #+#              #
-#    Updated: 2023/07/10 16:37:15 by dlu              ###   ########.fr        #
+#    Updated: 2023/07/11 12:06:02 by dlu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:=	Account
+NAME	:=	account
 SRC		:=	Account.cpp tests.cpp
 HEADER	:=	Account.hpp
 
