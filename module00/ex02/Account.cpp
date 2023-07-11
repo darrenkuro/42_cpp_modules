@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 13:48:15 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 04:38:57 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/11 11:53:47 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ Account::Account(void) { Account(0); }
 
 /* Destructor. */
 Account::~Account(void) {
-    _nbAccounts--;
     _displayTimestamp();
     std::cout << "index:" << _accountIndex << ";"
               << "amount:" << _amount << ";"
               << "closed" << std::endl;
+    _nbAccounts--;
 }
 
 /* Getters. */
@@ -60,11 +60,11 @@ void Account::makeDeposit(int deposit) {
     Account::_totalNbDeposits++;
     Account::_totalAmount += deposit;
     std::cout << "index:" << _accountIndex << ";"
-              << "p_amount" << _amount << ";" << std::flush;
+              << "p_amount:" << _amount << ";" << std::flush;
     _amount += deposit;
     std::cout << "deposit:" << deposit << ";"
               << "amount:" << _amount << ";"
-              << "nb_deposit:" << _nbDeposits << std::endl;
+              << "nb_deposits:" << _nbDeposits << std::endl;
 }
 
 /* Make withdrawal, return whether it was successful. */
@@ -83,7 +83,7 @@ bool Account::makeWithdrawal(int withdrawal) {
     _totalAmount -= withdrawal;
     _amount -= withdrawal;
     std::cout << "amount:" << _amount << ";"
-              << "nb_deposit:" << _nbDeposits << std::endl;
+              << "nb_withdrawals:" << _nbDeposits << std::endl;
     return true;
 }
 
@@ -106,6 +106,7 @@ void Account::_displayTimestamp() {
               << std::setw(2) << current->tm_mday << "_" << std::setw(2)
               << current->tm_hour << std::setw(2) << current->tm_min
               << std::setw(2) << current->tm_sec << "] ";
+    // std::cout << "[19920104_091532] ";
 }
 
 /* Display account information. */
