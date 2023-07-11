@@ -6,13 +6,13 @@
 #    By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/10 16:29:29 by dlu               #+#    #+#              #
-#    Updated: 2023/07/11 07:32:06 by dlu              ###   ########.fr        #
+#    Updated: 2023/07/11 12:07:12 by dlu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:=	Attack
-SRC		:=	main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
-HEADER	:=	Weapon.hpp HumanA.hpp HumanB.hpp
+NAME	:=	harl
+SRC		:=	Harl.cpp main.cpp
+HEADER	:=	Harl.hpp
 
 CC		:=	c++
 CFLAGS	:=	-Wall -Wextra -Werror -std=c++98
