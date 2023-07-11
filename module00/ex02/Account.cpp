@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 13:48:15 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 11:53:47 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/12 02:22:50 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,11 +101,12 @@ void Account::_displayTimestamp() {
     std::time_t time = std::time(NULL);
     std::tm *current = std::localtime(&time);
 
-    std::cout << "[" << std::setfill('0') << std::setw(4)
-              << current->tm_year + 1900 << std::setw(2) << current->tm_mon
-              << std::setw(2) << current->tm_mday << "_" << std::setw(2)
-              << current->tm_hour << std::setw(2) << current->tm_min
-              << std::setw(2) << current->tm_sec << "] ";
+    std::cout << std::put_time(current, "[%G%m%d_%H%M%S] ");
+    // std::cout << "[" << std::setfill('0') << std::setw(4)
+    //           << current->tm_year + 1900 << std::setw(2) << current->tm_mon
+    //           << std::setw(2) << current->tm_mday << "_" << std::setw(2)
+    //           << current->tm_hour << std::setw(2) << current->tm_min
+    //           << std::setw(2) << current->tm_sec << "] ";
     // std::cout << "[19920104_091532] ";
 }
 
