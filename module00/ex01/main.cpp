@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 08:58:43 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 09:48:31 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/11 11:41:40 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(void) {
     std::cout << "Welcome to PhoneBook. Please enter ADD / SEARCH / EXIT."
               << std::endl;
     while (true) {
-        std::cout << "> ";
+        std::cout << "> Enter Command: ";
         std::getline(std::cin, command);
         if (std::cin.eof() || command == "EXIT") {
             std::cout << "EXIT" << std::endl;

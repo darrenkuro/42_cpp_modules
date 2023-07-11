@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 11:22:26 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 10:20:36 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/11 11:41:42 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class PhoneBook {
 
   private:
     static int const MAX = 8;
-    int _index;
+    int _count;
     Contact _contacts[MAX];
-    void printSearchHeader(void) const;
+    void printSearchHeader(void);
 };
 
 #endif // PHONEBOOK_HPP

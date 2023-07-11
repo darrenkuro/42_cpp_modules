@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 09:39:21 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 10:47:43 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/11 11:41:38 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,35 +18,48 @@ Contact::~Contact() {}
 void Contact::setIndex(int const index) { _index = index; }
 
 bool Contact::setFirstName(std::string input) {
-    // valid, not empty && maybe not spaces
+    if (input.empty()) {
+        std::cerr << "Field cannot be empty." << std::endl;
+        return false;
+    }
     _firstName = input;
     return true;
 }
 
 bool Contact::setLastName(std::string input) {
+    if (input.empty()) {
+        std::cerr << "Field cannot be empty." << std::endl;
+        return false;
+    }
     _lastName = input;
     return true;
 }
 
 bool Contact::setNickname(std::string input) {
+    if (input.empty()) {
+        std::cerr << "Field cannot be empty." << std::endl;
+        return false;
+    }
     _nickname = input;
     return true;
 }
 
 bool Contact::setPhoneNumber(std::string input) {
+    if (input.empty()) {
+        std::cerr << "Field cannot be empty." << std::endl;
+        return false;
+    }
     _phoneNumber = input;
     return true;
 }
 
 bool Contact::setDarkestSecret(std::string input) {
+    if (input.empty()) {
+        std::cerr << "Field cannot be empty." << std::endl;
+        return false;
+    }
     _darkestSecret = input;
     return true;
-}
-
-bool Contact::isEmpty(void) {
-    if (_firstName == "" || _lastName == "")
-        return true;
-    return false;
 }
 
 void Contact::printField(std::string const field) const {

@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 18:08:49 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 10:35:30 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/11 10:55:27 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class Contact {
     bool setNickname(std::string const input);
     bool setPhoneNumber(std::string const input);
     bool setDarkestSecret(std::string const input);
-    bool isEmpty(void);
     void displayLine(void);
     void displayFull(void);
 
