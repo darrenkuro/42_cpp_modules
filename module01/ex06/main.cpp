@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/11 12:07:17 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 12:30:33 by dlu              ###   ########.fr       */
+/*   Created: 2023/07/11 12:30:45 by dlu               #+#    #+#             */
+/*   Updated: 2023/07/11 12:46:23 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-#define HARL_HPP
+#include "Harl.hpp"
 
-#include <iostream>
+int main(int ac, char **av) {
+    if (ac != 2) {
+        std::cerr << "Error: wrong argument count, should be 2." << std::endl;
+        return EXIT_FAILURE;
+    }
 
-class Harl {
-  public:
-    Harl();
-    ~Harl();
-    void complain(std::string level);
-
-  private:
-    void debug(void);
-    void info(void);
-    void warning(void);
-    void error(void);
-};
-
-typedef void (Harl::*func)(void);
-
-#endif // HARL_HPP
+    std::string level = av[1];
+    Harl harl;
+    harl.complain(level);
+    return EXIT_SUCCESS;
+}
