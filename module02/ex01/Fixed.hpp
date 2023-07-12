@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 19:55:30 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 20:56:47 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/12 19:31:55 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ class Fixed {
     static int const _nFractionalBits = 8;
     int _rawBits;
 };
+
+std::ostream &operator<<(std::ostream &os, const Fixed &t);
 
 #endif // FIXED_HPP

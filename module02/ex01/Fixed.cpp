@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 19:55:33 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 20:58:26 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/12 20:11:36 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,15 @@ Fixed::Fixed(int const val) : _rawBits(val << _nFractionalBits) {
     std::cout << "Int constructor called" << std::endl;
 }
 
+/**
+ * Note:
+ * For fixed point number, its bit value (as int) is the same as its
+ * value * (2^fractional bits), 256 (8^2) in this case. It's multiplying
+ * 2 eight times, since moving binary point left and right is effectively
+ * divided by or multiply by 2.
+ * In this case, val * (1 << _nFranctionalBits) is the same as
+ * val * (2 ** _nFranctionalBits).
+ */
 Fixed::Fixed(float const val)
     : _rawBits(std::roundf(val * (1 << _nFractionalBits))) {
     std::cout << "Float constructor called" << std::endl;
@@ -49,7 +58,7 @@ void Fixed::setRawBits(int const raw) { _rawBits = raw; };
 int Fixed::toInt(void) const { return _rawBits >> _nFractionalBits; }
 
 float Fixed::toFloat(void) const {
-    return (float)this->_rawBits / (1 << _nFractionalBits);
+    return static_cast<float>(_rawBits) / (1 << _nFractionalBits);
 }
 
 std::ostream &operator<<(std::ostream &os, const Fixed &t) {
