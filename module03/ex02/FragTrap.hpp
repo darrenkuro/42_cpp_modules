@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 03:36:45 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/12 03:39:05 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/12 03:38:00 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class FragTrap : public ClapTrap {
 
     FragTrap &operator=(FragTrap const &t);
 
+    void attack(std::string const &target);
     void highFivesGuys(void);
 };
 

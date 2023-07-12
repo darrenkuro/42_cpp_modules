@@ -6,13 +6,13 @@
 #    By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/10 16:29:29 by dlu               #+#    #+#              #
-#    Updated: 2023/07/11 12:06:35 by dlu              ###   ########.fr        #
+#    Updated: 2023/07/12 19:18:08 by dlu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:=	replace
-SRC		:=	main.cpp Replace.cpp
-HEADER	:=	Replace.hpp
+NAME	:=	replacer
+SRC		:=	main.cpp Replacer.cpp
+HEADER	:=	Replacer.hpp
 
 CC		:=	c++
 CFLAGS	:=	-Wall -Wextra -Werror -std=c++98
