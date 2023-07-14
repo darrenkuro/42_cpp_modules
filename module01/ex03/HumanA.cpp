@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 07:19:41 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 21:32:40 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 21:01:08 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 HumanA::HumanA(std::string name, Weapon &weapon)
     : _name(name), _weapon(weapon) {}
-HumanA::~HumanA() {}
+HumanA::~HumanA(void) {}
 
 void HumanA::attack(void) const {
     std::cout << _name << " attacks with their " << _weapon.getType()

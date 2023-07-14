@@ -6,13 +6,13 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 07:12:41 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 21:28:50 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 20:54:40 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-Weapon::Weapon(void) : _type("") {}
+Weapon::Weapon(void) : _type("Default") {}
 Weapon::~Weapon() {}
 Weapon::Weapon(std::string type) : _type(type) {}
 
