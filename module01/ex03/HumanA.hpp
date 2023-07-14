@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 07:00:15 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 12:20:51 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 21:32:46 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@
 
 class HumanA {
   public:
-    HumanA(std::string name, Weapon &weapon);
     ~HumanA();
+    HumanA(std::string name, Weapon &weapon);
+
     void attack(void) const;
 
   private:

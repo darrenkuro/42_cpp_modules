@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 16:39:27 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 05:01:33 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 21:13:37 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@
 
 class Zombie {
   public:
-    Zombie(std::string name);
+    Zombie();
     ~Zombie();
+    Zombie(std::string name);
+
     void announce(void);
 
   private:

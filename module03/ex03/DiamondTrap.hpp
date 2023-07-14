@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 03:43:31 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/12 03:45:24 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 10:41:24 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,15 @@
 
 class DiamondTrap : public ScavTrap, public FragTrap {
   public:
+    DiamondTrap();
     DiamondTrap(std::string name);
+    DiamondTrap(DiamondTrap const &t);
     ~DiamondTrap();
 
+    DiamondTrap &operator=(DiamondTrap const &t);
+
     using ScavTrap::attack;
-    void whoAmI(void);
+    void whoAmI(void) const;
 
   private:
     std::string _name;

@@ -6,14 +6,14 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 06:59:27 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 11:55:59 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 21:25:46 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
-int main() {
+int main(void) {
     {
         Weapon club = Weapon("crude spiked club");
         HumanA bob("Bob", club);

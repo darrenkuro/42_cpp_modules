@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 09:20:03 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 11:42:46 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 13:01:08 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,23 +22,28 @@ void PhoneBook::addContact(void) {
     do {
         std::cout << "First name: ";
         std::getline(std::cin, input);
-    } while (!_contacts[_count % MAX].setFirstName(input));
+    } while (!_contacts[_count % MAX].setField(firstname, input) &&
+             !std::cin.eof());
     do {
         std::cout << "Last name: ";
         std::getline(std::cin, input);
-    } while (!_contacts[_count % MAX].setLastName(input));
+    } while (!_contacts[_count % MAX].setField(lastname, input) &&
+             !std::cin.eof());
     do {
         std::cout << "Nickname: ";
         std::getline(std::cin, input);
-    } while (!_contacts[_count % MAX].setNickname(input));
+    } while (!_contacts[_count % MAX].setField(nickname, input) &&
+             !std::cin.eof());
     do {
         std::cout << "Phone number: ";
         std::getline(std::cin, input);
-    } while (!_contacts[_count % MAX].setPhoneNumber(input));
+    } while (!_contacts[_count % MAX].setField(phonenumber, input) &&
+             !std::cin.eof());
     do {
         std::cout << "Darkest secret: ";
         std::getline(std::cin, input);
-    } while (!_contacts[_count % MAX].setDarkestSecret(input));
+    } while (!_contacts[_count % MAX].setField(darkestsecret, input) &&
+             !std::cin.eof());
     _count++;
 }
 
@@ -59,7 +64,7 @@ void PhoneBook::searchContact(void) {
     printSearchHeader();
     std::string index;
     while (true) {
-        std::cout << "Enter index: ";
+        std::cout << "> Enter index: ";
         std::getline(std::cin, index);
         if (std::cin.eof())
             return;

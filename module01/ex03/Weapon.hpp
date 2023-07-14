@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 07:04:12 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 12:18:43 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 21:27:40 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@
 
 class Weapon {
   public:
-    Weapon(std::string type);
+    Weapon();
     ~Weapon();
+    Weapon(std::string type);
+
     std::string const &getType(void) const;
     void setType(std::string type);
 

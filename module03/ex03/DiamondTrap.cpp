@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 03:45:37 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/12 03:52:37 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 11:08:16 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ DiamondTrap::~DiamondTrap() {
     std::cout << "DiamondTrap destructor called for " << _name << std::endl;
 }
 
-void DiamondTrap::whoAmI(void) {
+void DiamondTrap::whoAmI(void) const {
     std::cout << "I am a DiamondTrap named " << _name
               << ", ClapTrap name: " << ClapTrap::_name << std::endl;
 }

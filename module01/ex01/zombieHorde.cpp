@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 04:38:21 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 07:35:31 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 21:19:07 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Zombie *zombieHorde(int N, std::string name) {
         return NULL;
     }
 
-    // Try catch block like protecting malloc in C
+    // Try catch block for protecting malloc in C
     try {
         Zombie *horde = new Zombie[N];
         for (int i = 0; i < N; i++)

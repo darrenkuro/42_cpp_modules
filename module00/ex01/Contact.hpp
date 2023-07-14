@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 18:08:49 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/12 02:38:24 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 13:03:20 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,20 @@
 #include <iomanip>
 #include <iostream>
 
+typedef enum field {
+    firstname,
+    lastname,
+    nickname,
+    phonenumber,
+    darkestsecret
+} field;
+
 class Contact {
   public:
     Contact();
     ~Contact();
     void setIndex(int const index);
-    bool setFirstName(std::string const input);
-    bool setLastName(std::string const input);
-    bool setNickname(std::string const input);
-    bool setPhoneNumber(std::string const input);
-    bool setDarkestSecret(std::string const input);
+    bool setField(field const field, std::string const input);
     void displayLine(void);
     void displayFull(void);
 
