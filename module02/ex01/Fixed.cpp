@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 19:55:33 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/12 20:11:36 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 21:21:50 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,12 @@ float Fixed::toFloat(void) const {
     return static_cast<float>(_rawBits) / (1 << _nFractionalBits);
 }
 
+/**
+ * The << operator for std::ostream is defined as a non-member function, and it
+ * cannot be declared as a member function of a class.
+ * The non-member operator<< function will be found via argument-dependent
+ * lookup (ADL) because of the type involved in the operation.
+ * */
 std::ostream &operator<<(std::ostream &os, const Fixed &t) {
     os << t.toFloat();
     return os;

@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 19:55:33 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/12 19:32:19 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 21:09:55 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,7 @@ int Fixed::getRawBits(void) const {
     return _rawBits;
 }
 
-void Fixed::setRawBits(int const raw) { _rawBits = raw; };
+void Fixed::setRawBits(int const raw) {
+    std::cout << "setRawBits member function called" << std::endl;
+    _rawBits = raw;
+};
