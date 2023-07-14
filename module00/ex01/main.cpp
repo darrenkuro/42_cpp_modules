@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 08:58:43 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 12:42:16 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 20:43:26 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int main(void) {
     while (true) {
         std::cout << "> Enter Command: ";
         std::getline(std::cin, command);
+        if (std::cin.eof())
+            break;
         if (command == "ADD")
             phonebook.addContact();
         else if (command == "SEARCH")
@@ -31,8 +33,6 @@ int main(void) {
         else
             std::cerr << "Unrecognized command: " << command << std::endl
                       << "Please enter ADD / SEARCH / EXIT. " << std::endl;
-        if (std::cin.eof())
-            break;
     }
     std::cout << "EXIT" << std::endl;
     return EXIT_SUCCESS;

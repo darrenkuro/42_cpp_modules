@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 09:39:21 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 21:41:35 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 20:39:55 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,32 @@
 Contact::Contact() {}
 Contact::~Contact() {}
 
-void Contact::setIndex(int const index) { _index = index; }
+void Contact::setIndex(int const idx) { _index = idx; }
 
 bool Contact::setField(field const field, std::string const input) {
     if (input.empty()) {
-        std::cerr << "Field cannot be empty." << std::endl;
+        std::cerr << "Field cannot be empty!" << std::endl;
         return false;
     }
     switch (field) {
-    case firstname:
+    case FirstName:
         _firstName = input;
-    case lastname:
+        break;
+    case LastName:
         _lastName = input;
-    case nickname:
+        break;
+    case NickName:
         _nickname = input;
-    case phonenumber:
+        break;
+    case PhoneNumber:
         _phoneNumber = input;
-    case darkestsecret:
+        break;
+    case DarkestSecret:
         _darkestSecret = input;
+        break;
+    default:
+        std::cerr << "Invalid field index!" << std::endl;
+        return false;
     }
     return true;
 }

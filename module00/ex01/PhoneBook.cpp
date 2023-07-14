@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 09:20:03 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 13:01:08 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/14 20:48:19 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,27 +22,27 @@ void PhoneBook::addContact(void) {
     do {
         std::cout << "First name: ";
         std::getline(std::cin, input);
-    } while (!_contacts[_count % MAX].setField(firstname, input) &&
+    } while (!_contacts[_count % MAX].setField(FirstName, input) &&
              !std::cin.eof());
     do {
         std::cout << "Last name: ";
         std::getline(std::cin, input);
-    } while (!_contacts[_count % MAX].setField(lastname, input) &&
+    } while (!_contacts[_count % MAX].setField(LastName, input) &&
              !std::cin.eof());
     do {
         std::cout << "Nickname: ";
         std::getline(std::cin, input);
-    } while (!_contacts[_count % MAX].setField(nickname, input) &&
+    } while (!_contacts[_count % MAX].setField(NickName, input) &&
              !std::cin.eof());
     do {
         std::cout << "Phone number: ";
         std::getline(std::cin, input);
-    } while (!_contacts[_count % MAX].setField(phonenumber, input) &&
+    } while (!_contacts[_count % MAX].setField(PhoneNumber, input) &&
              !std::cin.eof());
     do {
         std::cout << "Darkest secret: ";
         std::getline(std::cin, input);
-    } while (!_contacts[_count % MAX].setField(darkestsecret, input) &&
+    } while (!_contacts[_count % MAX].setField(DarkestSecret, input) &&
              !std::cin.eof());
     _count++;
 }
@@ -62,22 +62,23 @@ void PhoneBook::searchContact(void) {
         return;
     }
     printSearchHeader();
-    std::string index;
+    std::string idx;
     while (true) {
         std::cout << "> Enter index: ";
-        std::getline(std::cin, index);
+        std::getline(std::cin, idx);
         if (std::cin.eof())
             return;
         try {
-            int i = std::stoi(index);
+            int i = std::stoi(idx);
             if (i >= 0 && i < _count && i < MAX) {
-                _contacts[std::stoi(index)].displayFull();
+                _contacts[std::stoi(idx)].displayFull();
                 return;
-            } else
-                std::cerr << "Invalid index " << index << ". Try again."
+            } else {
+                std::cerr << "Invalid index: " << idx << ". Try again."
                           << std::endl;
+            }
         } catch (const std::invalid_argument &e) {
-            std::cerr << "Invalid input: " << index << ". Try again."
+            std::cerr << "Invalid input: " << idx << ". Try again."
                       << std::endl;
         }
     }
