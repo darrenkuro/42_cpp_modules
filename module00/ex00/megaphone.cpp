@@ -6,11 +6,12 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 13:24:12 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 21:38:35 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/17 19:28:16 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <cctype>
+#include <cstdlib>
 #include <iostream>
 
 std::string ft_toupper(char *str) {
