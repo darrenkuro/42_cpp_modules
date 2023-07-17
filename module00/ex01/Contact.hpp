@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 18:08:49 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 20:52:06 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/17 19:16:47 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iomanip>
 #include <iostream>
+#include <sstream>
 
 typedef enum field {
     FirstName,

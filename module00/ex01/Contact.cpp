@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 09:39:21 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/15 07:24:43 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/17 19:16:59 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,10 @@ void Contact::printField(std::string const field) const {
 }
 
 void Contact::displayLine(void) {
+    std::ostringstream oss;
+    oss << _index;
     std::cout << "|";
-    printField(std::to_string(_index));
+    printField(oss.str());
     printField(_firstName);
     printField(_lastName);
     printField(_nickname);

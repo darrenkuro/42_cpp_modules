@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 09:20:03 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 20:48:19 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/17 19:15:50 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,16 +68,17 @@ void PhoneBook::searchContact(void) {
         std::getline(std::cin, idx);
         if (std::cin.eof())
             return;
-        try {
-            int i = std::stoi(idx);
+        std::istringstream iss(idx);
+        int i;
+        if (iss >> i) {
             if (i >= 0 && i < _count && i < MAX) {
-                _contacts[std::stoi(idx)].displayFull();
+                _contacts[i].displayFull();
                 return;
             } else {
                 std::cerr << "Invalid index: " << idx << ". Try again."
                           << std::endl;
             }
-        } catch (const std::invalid_argument &e) {
+        } else {
             std::cerr << "Invalid input: " << idx << ". Try again."
                       << std::endl;
         }
