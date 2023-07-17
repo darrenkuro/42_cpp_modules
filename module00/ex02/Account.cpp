@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 13:48:15 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 20:52:49 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/17 19:24:11 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,9 +100,13 @@ void Account::displayStatus(void) const {
 void Account::_displayTimestamp() {
     std::time_t time = std::time(NULL);
     std::tm *current = std::localtime(&time);
+    char buffer[20];
 
-    std::cout << std::put_time(current, "[%G%m%d_%H%M%S] ");
-    // for diff with provided log
+    if (std::strftime(buffer, sizeof(buffer), "[%G%m%d_%H%M%S] ", current))
+        std::cout << buffer;
+    else
+        std::cerr << "Formatting time failed" << std::endl;
+    //  for diff with provided log
     // std::cout << "[19920104_091532] ";
 }
 
