@@ -69,5 +69,85 @@
 		"iterator": "cpp",
 		"memory_resource": "cpp",
 		"filesystem": "cpp"
-	}
+	},
+	"editor.minimap.enabled": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.formatOnSave": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "sqltools.useNodeRuntime": true,
+    "git.autofetch": true,
+	"editor.suggestOnTriggerCharacters": false,
+    "explorer.confirmDelete": false,
+    "editor.accessibilitySupport": "off",
+    "git.confirmSync": false,
+    "workbench.editor.untitled.hint": "hidden",
+    "editor.defaultFormatter": "evilcat.norminette-42",
+    "workbench.startupEditor": "none",
+    "terminal.integrated.env.osx": {
+		"FIG_NEW_SESSION": "1"
+	},
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false,
+    "prettier.singleAttributePerLine": true,
+    "workbench.colorTheme": "GitHub Dark",
+    "prettier.tabWidth": 4,
+    "material-icon-theme.activeIconPack": "react",
+    "material-icon-theme.opacity": 0.8,
+    "material-icon-theme.saturation": 0.8,
+    "material-icon-theme.folders.associations": {
+        "modals": "interface",
+        "commands": "functions",
+        "component": "react-components",
+        "to-process": "error",
+        "data-fetching": "Api",
+        "data-models": "database",
+        "entry-model": "database",
+        "experiment": "project"
+    },
+    "material-icon-theme.files.associations": {
+        "svg.tsx": "svgr",
+        "constants.ts": "tsconfig",
+        "playground.ts": "test-ts"
+    },
+    "files.exclude": {
+        "**/Icon?": true
+    },
+    "editor.inlineSuggest.enabled": true,
+    "editor.fontFamily": "FiraCode Nerd Font Mono, Menlo, Monaco, 'Courier New', monospace",
+    "github.copilot.enable": {
+        "*": false,
+        "yaml": false,
+        "plaintext": true,
+        "markdown": false
+    },
+    "editor.fontSize": 13,
+    "prettier.bracketSameLine": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+        //☝🏼 Select the MS extension as defaultFormatter
+      },
+      "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "settingsSync.ignoredSettings": [
+        "editor.defaultFormatter"
+    ],
+"editor.renderWhitespace": "trailing",
+"files.trimTrailingWhitespace": true,
+"files.insertFinalNewline": true,
+"C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
+"C_Cpp.formatting": "clangFormat",
+"C_Cpp.vcFormat.space.beforeComma": true,
+"editor.insertSpaces": false,
+"C_Cpp.clang_format_style": "{ BasedOnStyle: LLVM, IndentWidth: 4}",
+"editor.detectIndentation": false,
+"C_Cpp.vcFormat.indent.accessSpecifiers": true,
+"C_Cpp.clang_format_fallbackStyle": "LLVM",
+"42header.username": "dlu",
+"42header.email": "dlu@student.42berlin.de"
 }
