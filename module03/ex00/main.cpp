@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 03:09:13 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/18 15:53:11 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/18 16:43:13 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,7 @@ int main(void) {
     claptrap.attack("Target");
     claptrap.takeDamage(8);
     claptrap.beRepaired(2);
+	claptrap.takeDamage(5);
+	claptrap.attack("Dead");
     return EXIT_SUCCESS;
 }
