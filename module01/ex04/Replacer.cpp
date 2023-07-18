@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 07:42:09 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 21:01:39 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/18 10:29:53 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ Replacer::Replacer(std::string filename)
 Replacer::~Replacer() {}
 
 bool Replacer::execute(std::string find, std::string replace) {
-    std::ifstream infile(_infile);
+    std::ifstream infile(_infile.c_str());
     if (!infile.is_open()) {
         std::cerr << "Failed to open file " << _infile << std::endl;
         return false;
     }
-    std::ofstream outfile(_outfile);
+    std::ofstream outfile(_outfile.c_str());
     if (!outfile.is_open()) {
         std::cerr << "Failed to create file " << _outfile << std::endl;
         infile.close();

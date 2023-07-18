@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 12:09:37 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 21:06:53 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/18 10:36:34 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void Harl::error(void) {
 }
 
 void Harl::complain(std::string level) {
-    int level_n;
+    int level_n = -1;
 
     std::string level_strings[MAX_LEVEL] = {"DEBUG", "INFO", "WARNING",
                                             "ERROR"};

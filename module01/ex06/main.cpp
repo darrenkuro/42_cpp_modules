@@ -6,11 +6,12 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 12:30:45 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 21:07:09 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/18 10:34:21 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
+#include <cstdlib>
 
 int main(int ac, char **av) {
     if (ac != 2) {

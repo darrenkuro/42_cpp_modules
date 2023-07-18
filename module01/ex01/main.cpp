@@ -6,11 +6,12 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 04:42:58 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/11 07:34:43 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/18 10:19:54 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include <cstdlib>
 
 int main(void) {
     int count = 5;
