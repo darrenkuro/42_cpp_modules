@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 20:53:45 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 10:38:56 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/18 13:58:06 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class Point {
     Fixed const getY(void) const;
 
   private:
-    Fixed const _x;
-    Fixed const _y;
+    Fixed _x;
+    Fixed _y;
 };
 
 #endif // POINT_HPP

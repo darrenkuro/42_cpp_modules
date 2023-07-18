@@ -6,28 +6,28 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 19:55:28 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/12 20:42:54 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/18 15:48:54 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Point.hpp"
 #include <iostream>
 
-int main(void) {
-    Fixed a;
-    Fixed const b(Fixed(5.05f) * Fixed(2));
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << Fixed::max(a, b) << std::endl;
+bool bsp(Point const a, Point const b, Point const c, Point const point);
 
-    // Custom tests
-    Fixed c(42.42f); // actual value: 10860 => 42.42.1875
-    std::cout << "=================================" << std::endl;
-    std::cout << ++c << std::endl;
+int main(void) {
+    Point a(0.0f, 0.0f);
+    Point b(4.0f, 0.0f);
+    Point c(2.0f, 4.0f);
+
+    Point test(0.0f, 1.0f);
+
+    std::cout << bsp(a, b, c, test) << std::endl;
+    std::cout << bsp(a, c, b, test) << std::endl;
+    std::cout << bsp(b, a, c, test) << std::endl;
+    std::cout << bsp(b, c, a, test) << std::endl;
+    std::cout << bsp(c, b, a, test) << std::endl;
+    std::cout << bsp(c, a, b, test) << std::endl;
 
     return 0;
 }

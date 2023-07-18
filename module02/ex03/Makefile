@@ -6,13 +6,13 @@
 #    By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/10 16:29:29 by dlu               #+#    #+#              #
-#    Updated: 2023/07/11 19:55:14 by dlu              ###   ########.fr        #
+#    Updated: 2023/07/18 15:39:24 by dlu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:=	fixed
-SRC		:=	main.cpp Fixed.cpp
-HEADER	:=	Fixed.hpp
+NAME	:=	bsp
+SRC		:=	main.cpp Fixed.cpp Point.cpp bsp.cpp
+HEADER	:=	Fixed.hpp Point.hpp
 
 CC		:=	c++
 CFLAGS	:=	-Wall -Wextra -Werror -std=c++98
