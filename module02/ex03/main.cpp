@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 19:55:28 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/18 15:48:54 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/18 16:31:36 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(void) {
     Point b(4.0f, 0.0f);
     Point c(2.0f, 4.0f);
 
-    Point test(0.0f, 1.0f);
+    Point test(1.0f, 1.0f);
 
     std::cout << bsp(a, b, c, test) << std::endl;
     std::cout << bsp(a, c, b, test) << std::endl;

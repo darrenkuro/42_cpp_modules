@@ -6,11 +6,12 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 03:09:13 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/12 03:54:26 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/18 15:54:07 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
+#include <cstdlib>
 
 int main(void) {
     DiamondTrap diamondtrap("Darren");
