@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 19:55:33 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/15 07:37:12 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/18 10:53:28 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ Fixed::Fixed(int const val) : _rawBits(val << _nFractionalBits) {
 }
 
 Fixed::Fixed(float const val)
-    : _rawBits(std::roundf(val * (1 << _nFractionalBits))) {
+    : _rawBits(val >= 0.0f
+                   ? static_cast<int>(val * (1 << _nFractionalBits) + 0.5f)
+                   : static_cast<int>(val * (1 << _nFractionalBits) - 0.5f)) {
     std::cout << "Float constructor called" << std::endl;
 }
 

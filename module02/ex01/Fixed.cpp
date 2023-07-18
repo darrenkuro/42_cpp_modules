@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 19:55:33 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 21:21:50 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/18 10:47:25 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,12 @@ Fixed::Fixed(int const val) : _rawBits(val << _nFractionalBits) {
  * divided by or multiply by 2.
  * In this case, val * (1 << _nFranctionalBits) is the same as
  * val * (2 ** _nFranctionalBits).
+ * std::roundf is available after c++11. Cast to int always truncates.
  */
 Fixed::Fixed(float const val)
-    : _rawBits(std::roundf(val * (1 << _nFractionalBits))) {
+    : _rawBits(val >= 0.0f
+                   ? static_cast<int>(val * (1 << _nFractionalBits) + 0.5f)
+                   : static_cast<int>(val * (1 << _nFractionalBits) - 0.5f)) {
     std::cout << "Float constructor called" << std::endl;
 }
 
