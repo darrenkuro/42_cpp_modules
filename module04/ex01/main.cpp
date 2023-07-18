@@ -6,12 +6,13 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 21:45:03 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/13 03:42:52 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/18 19:04:44 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include <cstdlib>
 
 int main() {
     int const count = 4;
