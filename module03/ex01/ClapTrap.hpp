@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 02:40:50 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/12 03:30:37 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/18 16:48:42 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define CLAPTRAP_HPP
 
 #include <iostream>
+
 class ClapTrap {
   public:
     ClapTrap();

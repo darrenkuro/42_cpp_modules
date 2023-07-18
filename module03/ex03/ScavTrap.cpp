@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 03:17:28 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/12 03:37:54 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/18 17:28:30 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@ ScavTrap::ScavTrap() {
 }
 
 ScavTrap::ScavTrap(std::string name) {
+    std::cout << "ScavTrap constructor called for " << name << std::endl;
     _name = name;
     _hitPoints = 100;
     _energyPoints = 50;
     _attackDamage = 20;
-    std::cout << "ScavTrap constructor called for " << _name << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap const &t) {
-    *this = t;
     std::cout << "ScavTrap copy constructor called" << std::endl;
+    *this = t;
 }
 
 ScavTrap::~ScavTrap() {
@@ -35,6 +35,7 @@ ScavTrap::~ScavTrap() {
 }
 
 ScavTrap &ScavTrap::operator=(ScavTrap const &t) {
+    std::cout << "ScavTrap copy assignment operator called" << std::endl;
     _name = t._name;
     _hitPoints = t._hitPoints;
     _energyPoints = t._energyPoints;
@@ -44,19 +45,22 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &t) {
 
 /* Attack given target, costs 1 energy point, prints a different message. */
 void ScavTrap::attack(std::string const &target) {
-    if (_energyPoints > 0) {
+    if (_energyPoints > 0 && _hitPoints > 0) {
         std::cout << "ScavTrap " << _name << " attacks " << target
                   << ", causing " << _attackDamage << " points of damage! "
                   << "This is important because it's a different message!"
                   << std::endl;
         _energyPoints--;
-    } else {
-        std::cout << "ScavTrap " << _name << " has no energy left."
+    } else if (_hitPoints <= 0) {
+        std::cout << "ScavTrap " << _name << " is dead, failed to attack!"
                   << std::endl;
+    } else if (_energyPoints <= 0) {
+        std::cout << "ScavTrap " << _name
+                  << " has no energy left, failed to attack!" << std::endl;
     }
 }
 
-void ScavTrap::guardGate(void) {
+void ScavTrap::guardGate() {
     std::cout << "ScavTrap " << _name << " is now in Gate keeper mode!"
               << std::endl;
 }
