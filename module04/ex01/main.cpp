@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 21:45:03 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/18 19:04:44 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 13:22:42 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,17 @@ int main() {
               << std::endl;
     std::cout << dynamic_cast<Cat *>(animals[2])->getBrain()->getIdea(0)
               << std::endl;
+    dynamic_cast<Cat *>(animals[2])
+        ->getBrain()
+        ->setIdea(0, "animal 2 cat, idea 0 NEW");
     // dynamic_cast<Cat *>(animals[0]) = dynamic_cast<Cat *>(animals[2]);
     std::cout << dynamic_cast<Cat *>(animals[0])->getBrain()->getIdea(0)
               << std::endl;
     std::cout << dynamic_cast<Cat *>(animals[2])->getBrain()->getIdea(0)
               << std::endl;
 
+    Dog basic;
+    { Dog tmp = basic; }
     std::cout << "============  DESTRUCTORS  =============" << std::endl;
     for (int i = 0; i < count; i++)
         delete animals[i];

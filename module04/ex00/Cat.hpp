@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 21:29:05 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/12 21:42:00 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 13:37:53 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Cat : public Animal {
   public:
     Cat();
-    ~Cat();
+    virtual ~Cat();
 
     void makeSound() const;
 };

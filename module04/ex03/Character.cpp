@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 20:23:14 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/19 09:08:13 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 14:07:55 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,18 @@ Character::~Character(void) {
 }
 
 Character::Character(std::string const &name) : _name(name), _nEquiped(0) {
-    std::cout << "character" << std::endl;
     for (int i = 0; i < inventorySize; i++)
         _inventory[i] = NULL;
 }
 
-Character::Character(Character const &t) { *this = t; }
+Character::Character(Character const &t) {
+    _name = t._name;
+    for (int i = 0; i < inventorySize; i++) {
+        if (_inventory[i])
+            delete _inventory[i];
+        _inventory[i] = t._inventory[i]->clone();
+    }
+}
 
 Character &Character::operator=(Character const &t) {
     if (this != &t) {
@@ -51,7 +57,7 @@ std::string const &Character::getName() const { return _name; }
 
 void Character::equip(AMateria *m) {
     for (int i = 0; i < inventorySize; i++)
-        if (!_inventory[i]) {
+        if (_inventory[i] == NULL) {
             _inventory[i] = m;
             _nEquiped++;
             return;
@@ -65,7 +71,7 @@ void Character::equip(AMateria *m) {
  */
 void Character::unequip(int idx) {
     if (idx >= 0 && idx < inventorySize && _inventory[idx]) {
-        _inventory[_nEquiped] = NULL;
+        _inventory[idx] = NULL;
         _nEquiped--;
     }
 }

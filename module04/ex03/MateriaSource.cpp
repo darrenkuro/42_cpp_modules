@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 07:45:07 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/19 09:13:47 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 13:57:31 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,6 @@ MateriaSource &MateriaSource::operator=(MateriaSource const &t) {
     return *this;
 }
 
-// AMateria *MateriaSource::getMateria(std::string const &type) {
-//     for (int i = 0; i < 4; i++)
-//         if (materias[i] && materias[i]->getType() == type)
-//             return materias[i];
-//     return NULL;
-// }
-
 void MateriaSource::learnMateria(AMateria *m) {
     if (_nLearned >= materiaSize)
         return;
@@ -52,11 +45,8 @@ void MateriaSource::learnMateria(AMateria *m) {
 }
 
 AMateria *MateriaSource::createMateria(std::string const &type) {
-    std::cout << "materia " << type << std::endl;
-
     for (int i = 0; i < materiaSize; i++)
         if (_materias[i] && _materias[i]->getType() == type) {
-            std::cout << _materias[i]->getType() << "hey" << std::endl;
             return _materias[i]->clone();
         }
     return NULL;

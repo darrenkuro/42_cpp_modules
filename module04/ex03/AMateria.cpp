@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 20:02:30 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/19 09:17:59 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 13:57:59 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,9 @@ AMateria::~AMateria(void) {}
 AMateria::AMateria(std::string const &type) : _type(type) {}
 AMateria::AMateria(AMateria const &t) { *this = t; }
 
-/**
- * "Clone and copy" technique for base class to assign the correct type.
- */
 AMateria &AMateria::operator=(AMateria const &t) {
-    // AMateria *temp = this;
-    if (this != &t) {
-        *this = *(t.clone());
-        // delete temp;
-    }
+    if (this != &t)
+        return *(t.clone());
     return *this;
 }
 

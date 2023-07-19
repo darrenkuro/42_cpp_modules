@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 21:44:18 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/13 02:45:53 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 13:33:20 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ Dog::~Dog() {
 
 Dog::Dog(Dog const &t) {
     std::cout << "Dog copy constructor called" << std::endl;
-    *this = t;
+	_type = t._type;
+    _brain = new Brain(*t._brain);
 };
 
 Dog &Dog::operator=(Dog const &t) {

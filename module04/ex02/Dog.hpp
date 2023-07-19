@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 21:29:07 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/19 06:33:58 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 13:39:53 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Dog : public AAnimal {
   public:
     Dog();
-    ~Dog();
+    virtual ~Dog();
     Dog(Dog const &t);
 
     Dog &operator=(Dog const &t);

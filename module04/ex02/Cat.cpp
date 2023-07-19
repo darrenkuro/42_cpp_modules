@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 21:42:03 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/13 02:45:22 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 13:33:07 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ Cat::~Cat() {
 
 Cat::Cat(Cat const &t) {
     std::cout << "Cat copy constructor called" << std::endl;
-    *this = t;
+    _type = t._type;
+    _brain = new Brain(*t._brain);
 };
 
 Cat &Cat::operator=(Cat const &t) {

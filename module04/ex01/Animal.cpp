@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 21:34:31 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/19 06:20:21 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 12:58:21 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Animal::Animal() { std::cout << "Animal constructor called" << std::endl; }
 Animal::~Animal() { std::cout << "Animal destructor called" << std::endl; }
 Animal::Animal(Animal const &t) {
     std::cout << "Animal copy constructor called" << std::endl;
-    *this = t;
+    _type = t.getType();
 }
 Animal &Animal::operator=(Animal const &t) {
     std::cout << "Animal copy assignment op called" << std::endl;

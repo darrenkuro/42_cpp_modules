@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 21:29:05 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/19 06:33:51 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 13:39:49 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Cat : public AAnimal {
   public:
     Cat();
     Cat(Cat const &t);
-    ~Cat();
+    virtual ~Cat();
 
     Cat &operator=(Cat const &t);
 

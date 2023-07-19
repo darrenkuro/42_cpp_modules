@@ -16,7 +16,7 @@ AAnimal::AAnimal() { std::cout << "AAnimal constructor called" << std::endl; }
 AAnimal::~AAnimal() { std::cout << "AAnimal destructor called" << std::endl; }
 AAnimal::AAnimal(AAnimal const &t) {
     std::cout << "AAnimal copy constructor called" << std::endl;
-    *this = t;
+    _type = t.getType();
 }
 AAnimal &AAnimal::operator=(AAnimal const &t) {
     std::cout << "AAnimal copy assignment op called" << std::endl;

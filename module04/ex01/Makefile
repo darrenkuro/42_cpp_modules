@@ -6,7 +6,7 @@
 #    By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/10 16:29:29 by dlu               #+#    #+#              #
-#    Updated: 2023/07/13 01:57:16 by dlu              ###   ########.fr        #
+#    Updated: 2023/07/19 12:26:02 by dlu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRC		:=	main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 HEADER	:=	Animal.hpp Dog.hpp Cat.hpp Brain.hpp
 
 CC		:=	c++
-CFLAGS	:=	-Wall -Wextra -Werror -std=c++98
+CFLAGS	:=	-Wall -Wextra -Werror -std=c++98 -g
 RM		:=	/bin/rm -rf
 OBJDIR	:=	objs
 OBJ		:=	$(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
