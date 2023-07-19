@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 03:17:28 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/18 16:57:59 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 10:40:43 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ScavTrap::~ScavTrap() {
 }
 
 ScavTrap &ScavTrap::operator=(ScavTrap const &t) {
-	std::cout << "ScavTrap copy assignment operator called" << std::endl;
+    std::cout << "ScavTrap copy assignment operator called" << std::endl;
     _name = t._name;
     _hitPoints = t._hitPoints;
     _energyPoints = t._energyPoints;
@@ -51,7 +51,7 @@ void ScavTrap::attack(std::string const &target) {
                   << "This is important because it's a different message!"
                   << std::endl;
         _energyPoints--;
-	} else if (_hitPoints <= 0) {
+    } else if (_hitPoints <= 0) {
         std::cout << "ScavTrap " << _name << " is dead, failed to attack!"
                   << std::endl;
     } else if (_energyPoints <= 0) {
@@ -61,6 +61,15 @@ void ScavTrap::attack(std::string const &target) {
 }
 
 void ScavTrap::guardGate() {
-    std::cout << "ScavTrap " << _name << " is now in Gate keeper mode!"
-              << std::endl;
+    if (_energyPoints > 0 && _hitPoints > 0) {
+        std::cout << "ScavTrap " << _name << " is now in Gate keeper mode!"
+                  << std::endl;
+        _energyPoints--;
+    } else if (_hitPoints <= 0) {
+        std::cout << "ScavTrap " << _name << " is dead, failed to guard gate!"
+                  << std::endl;
+    } else if (_energyPoints <= 0) {
+        std::cout << "ScavTrap " << _name
+                  << " has no energy left, failed to guard gate!" << std::endl;
+    }
 }

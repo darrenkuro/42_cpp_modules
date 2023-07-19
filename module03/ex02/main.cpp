@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 03:09:13 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/18 17:25:06 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 10:46:30 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,12 @@
 #include <cstdlib>
 
 int main(void) {
-    ClapTrap claptrap("Darren");
-    ScavTrap scavtrap("Fred");
-
-    claptrap.attack("Target");
-    claptrap.takeDamage(8);
-    claptrap.beRepaired(2);
-
-    scavtrap.attack("Darren");
-    claptrap.takeDamage(20);
-    scavtrap.takeDamage(100);
-    scavtrap.attack("Darren");
-
-    FragTrap fragtrap("Ugh");
+    FragTrap fragtrap("Darren");
     fragtrap.attack("Target");
+    fragtrap.beRepaired(20);
     fragtrap.highFivesGuys();
+    fragtrap.takeDamage(400);
+    fragtrap.highFivesGuys();
+    fragtrap.attack("Target");
     return EXIT_SUCCESS;
 }

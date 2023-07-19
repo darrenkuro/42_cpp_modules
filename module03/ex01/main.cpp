@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 03:09:13 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/18 16:58:06 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 10:40:02 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int main(void) {
     ClapTrap claptrap("Darren");
     ScavTrap scavtrap("Fred");
 
+    scavtrap.guardGate();
     claptrap.attack("Target");
     claptrap.takeDamage(8);
     claptrap.beRepaired(2);
@@ -26,5 +27,6 @@ int main(void) {
     claptrap.takeDamage(20);
     scavtrap.takeDamage(100);
     scavtrap.attack("Darren");
+    scavtrap.guardGate();
     return EXIT_SUCCESS;
 }

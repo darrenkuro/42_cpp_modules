@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 03:36:47 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/18 16:57:56 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 10:47:28 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ FragTrap::FragTrap() {
 }
 
 FragTrap::FragTrap(std::string name) {
-	    std::cout << "FragTrap constructor called for " << name << std::endl;
+    std::cout << "FragTrap constructor called for " << name << std::endl;
     _name = name;
     _hitPoints = 100;
     _energyPoints = 100;
@@ -26,7 +26,7 @@ FragTrap::FragTrap(std::string name) {
 }
 
 FragTrap::FragTrap(FragTrap const &t) {
-	std::cout << "FragTrap copy constructor called" << std::endl;
+    std::cout << "FragTrap copy constructor called" << std::endl;
     *this = t;
 }
 
@@ -35,7 +35,7 @@ FragTrap::~FragTrap() {
 }
 
 FragTrap &FragTrap::operator=(FragTrap const &t) {
-	std::cout << "FragTrap copy assignment operator called" << std::endl;
+    std::cout << "FragTrap copy assignment operator called" << std::endl;
     _name = t._name;
     _hitPoints = t._hitPoints;
     _energyPoints = t._energyPoints;
@@ -51,7 +51,7 @@ void FragTrap::attack(std::string const &target) {
                   << "This is important because it's a different message!"
                   << std::endl;
         _energyPoints--;
-	} else if (_hitPoints <= 0) {
+    } else if (_hitPoints <= 0) {
         std::cout << "FragTrap " << _name << " is dead, failed to attack!"
                   << std::endl;
     } else if (_energyPoints <= 0) {
@@ -61,5 +61,16 @@ void FragTrap::attack(std::string const &target) {
 }
 
 void FragTrap::highFivesGuys(void) {
-    std::cout << "FragTrap " << _name << " highfives everybody!" << std::endl;
+    if (_energyPoints > 0 && _hitPoints > 0) {
+        std::cout << "FragTrap " << _name << " highfives everybody!"
+                  << std::endl;
+        _energyPoints--;
+    } else if (_hitPoints <= 0) {
+        std::cout << "FragTrap " << _name
+                  << " is dead, failed to give highfives!" << std::endl;
+    } else if (_energyPoints <= 0) {
+        std::cout << "FragTrap " << _name
+                  << " has no energy left, failed to give highfives!"
+                  << std::endl;
+    }
 }

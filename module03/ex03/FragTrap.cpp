@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 03:36:47 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/18 17:28:21 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 10:47:31 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,16 @@ void FragTrap::attack(std::string const &target) {
 }
 
 void FragTrap::highFivesGuys(void) {
-    std::cout << "FragTrap " << _name << " highfives everybody!" << std::endl;
+    if (_energyPoints > 0 && _hitPoints > 0) {
+        std::cout << "FragTrap " << _name << " highfives everybody!"
+                  << std::endl;
+        _energyPoints--;
+    } else if (_hitPoints <= 0) {
+        std::cout << "FragTrap " << _name
+                  << " is dead, failed to give highfives!" << std::endl;
+    } else if (_energyPoints <= 0) {
+        std::cout << "FragTrap " << _name
+                  << " has no energy left, failed to give highfives!"
+                  << std::endl;
+    }
 }

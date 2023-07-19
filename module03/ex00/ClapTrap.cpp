@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 02:44:36 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/18 16:44:57 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 10:36:39 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ ClapTrap::ClapTrap(std::string name)
 }
 
 ClapTrap::ClapTrap(ClapTrap const &t) {
-    *this = t;
     std::cout << "ClapTrap copy constructor called" << std::endl;
+    *this = t;
 }
 
 ClapTrap::~ClapTrap() {
