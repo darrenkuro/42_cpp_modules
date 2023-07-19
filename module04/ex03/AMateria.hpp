@@ -6,21 +6,23 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 19:58:52 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 20:12:49 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 09:04:48 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AMATERIA_HPP
 #define AMATERIA_HPP
 
+#include "ICharacter.hpp"
 #include <iostream>
+class ICharacter;
 
 class AMateria {
   public:
     AMateria();
-    virtual ~Amateria();
+    virtual ~AMateria();
     AMateria(std::string const &type);
-    AMateria(Amateria const &t);
+    AMateria(AMateria const &t);
 
     AMateria &operator=(AMateria const &t);
 

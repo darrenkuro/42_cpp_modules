@@ -6,15 +6,15 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 21:42:03 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/12 21:46:52 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 06:19:31 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 Cat::Cat() {
-    _type = "Cat";
     std::cout << "Cat constructor called" << std::endl;
+    _type = "Cat";
 }
 Cat::~Cat() { std::cout << "Cat destructor called" << std::endl; }
 

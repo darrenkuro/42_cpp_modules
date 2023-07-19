@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 21:29:25 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/12 22:19:48 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 06:19:01 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ class Animal {
   public:
     Animal();
     Animal(Animal const &t);
-    // Any class with virtual function must have virtual destructor
-    // To ensure that pointer to a derived class calls destructors
-    // properly
+    /**
+     * Notes:
+     * Virtual destructor is to make sure derived class instances
+     * that's declared as this class would be called properly.
+     */
     virtual ~Animal();
 
     Animal &operator=(Animal const &t);

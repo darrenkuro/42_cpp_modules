@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 20:19:49 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 20:28:49 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 07:16:54 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Character : public ICharacter {
     Character(std::string const &name);
     Character(Character const &t);
 
-    Character &operator=(Character const &other);
+    Character &operator=(Character const &t);
 
     std::string const &getName() const;
     void equip(AMateria *m);

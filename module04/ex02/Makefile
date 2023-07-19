@@ -6,13 +6,13 @@
 #    By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/10 16:29:29 by dlu               #+#    #+#              #
-#    Updated: 2023/07/13 01:57:16 by dlu              ###   ########.fr        #
+#    Updated: 2023/07/19 06:34:25 by dlu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	:=	animal
-SRC		:=	main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
-HEADER	:=	Animal.hpp Dog.hpp Cat.hpp Brain.hpp
+SRC		:=	main.cpp AAnimal.cpp Dog.cpp Cat.cpp Brain.cpp
+HEADER	:=	AAnimal.hpp Dog.hpp Cat.hpp Brain.hpp
 
 CC		:=	c++
 CFLAGS	:=	-Wall -Wextra -Werror -std=c++98

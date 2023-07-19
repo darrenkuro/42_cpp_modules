@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 20:05:27 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/14 20:06:18 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 09:05:53 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define ICHARACTER_HPP
 
 #include "AMateria.hpp"
+#include <iostream>
+class AMateria;
 
 class ICharacter {
   public:

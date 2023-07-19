@@ -6,17 +6,17 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 21:29:05 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/13 02:45:38 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 06:33:51 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 #define CAT_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal {
+class Cat : public AAnimal {
   public:
     Cat();
     Cat(Cat const &t);
