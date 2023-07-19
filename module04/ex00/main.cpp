@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 21:45:03 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/18 19:04:03 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/19 12:16:44 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ int main() {
     // const WrongCat *wrongcat = new WrongCat();
     const WrongAnimal *wrongcat = new WrongCat();
     wrongcat->makeSound();
+    const WrongCat *wrongcat2 = new WrongCat();
+    wrongcat2->makeSound();
     delete wrongmeta;
     delete wrongcat;
+    delete wrongcat2;
     return 0;
 }
