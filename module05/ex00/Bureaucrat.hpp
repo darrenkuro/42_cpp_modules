@@ -6,15 +6,15 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 16:19:24 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/25 17:08:26 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/26 13:48:27 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 #define BUREAUCRAT_HPP
 
-#include <iostream>
 #include <exception>
+#include <iostream>
 
 class Bureaucrat {
   public:
@@ -30,17 +30,13 @@ class Bureaucrat {
     void incrementGrade(void);
     void decrementGrade(void);
 
-    class GradeTooHighException: public std::exception {
+    class GradeTooHighException : public std::exception {
       public:
-        GradeTooHighException() = default;
-
-        const char *what() const noexcept override;
+        virtual const char *what() const throw();
     };
-    class GradeTooLowException: public std::exception {
+    class GradeTooLowException : public std::exception {
       public:
-        GradeTooLowException() = default;
-
-        const char *what() const noexcept override;
+        virtual const char *what() const throw();
     };
 
   private:
