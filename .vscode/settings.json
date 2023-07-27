@@ -68,7 +68,15 @@
 		"stack": "cpp",
 		"iterator": "cpp",
 		"memory_resource": "cpp",
-		"filesystem": "cpp"
+		"filesystem": "cpp",
+		"*.tcc": "cpp",
+		"functional": "cpp",
+		"numeric": "cpp",
+		"random": "cpp",
+		"utility": "cpp",
+		"numbers": "cpp",
+		"ranges": "cpp",
+		"span": "cpp"
 	},
 	"editor.minimap.enabled": false,
     "workbench.iconTheme": "material-icon-theme",
