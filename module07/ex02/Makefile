@@ -6,13 +6,13 @@
 #    By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/10 16:29:29 by dlu               #+#    #+#              #
-#    Updated: 2023/07/27 10:40:52 by dlu              ###   ########.fr        #
+#    Updated: 2023/07/27 10:29:10 by dlu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:=	whatever
+NAME	:=	array
 SRC		:=	main.cpp
-HEADER	:=	whatever.hpp
+HEADER	:=	Array.hpp
 
 CC		:=	c++
 CFLAGS	:=	-Wall -Wextra -Werror -std=c++98
