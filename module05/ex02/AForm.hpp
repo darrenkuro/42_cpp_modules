@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 02:57:14 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/27 05:45:29 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/27 05:46:24 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-#define FORM_HPP
+#ifndef AFORM_HPP
+#define AFORM_HPP
 
 #include <exception>
 #include <iostream>
 
 class Bureaucrat;
 
-class Form {
+class AForm {
   public:
-    Form();
-    ~Form();
-    Form(Form const &t);
-    Form(std::string name, unsigned int signGrade, unsigned int execGrade);
+    AForm();
+    ~AForm();
+    AForm(AForm const &t);
+    AForm(std::string name, unsigned int signGrade, unsigned int execGrade);
 
-    Form &operator=(Form const &t);
+    AForm &operator=(AForm const &t);
 
     std::string const getName() const;
     unsigned int getSignGrade() const;
@@ -33,6 +33,7 @@ class Form {
     bool getSigned() const;
 
     void beSigned(Bureaucrat &signer);
+    virtual void execute(Bureaucrat const &executor) const = 0;
 
     class GradeTooHighException : public std::exception {
       public:
@@ -52,6 +53,15 @@ class Form {
       private:
         std::string _msg;
     };
+    class NotSignedException : public std::exception {
+      public:
+        NotSignedException(std::string const name);
+        virtual ~NotSignedException() throw();
+        virtual char const *what() const throw();
+
+      private:
+        std::string _msg;
+    };
 
   private:
     static unsigned int const lowestGrade = 150;
@@ -62,6 +72,6 @@ class Form {
     bool _signed;
 };
 
-std::ostream &operator<<(std::ostream &os, Form const &t);
+std::ostream &operator<<(std::ostream &os, AForm const &t);
 
-#endif // FORM_HPP
+#endif // AFORM_HPP

@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 16:19:24 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/27 03:54:30 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/27 05:45:09 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class Bureaucrat {
       public:
         GradeTooHighException(std::string const name);
         virtual ~GradeTooHighException() throw();
-        virtual const char *what() const throw();
+        virtual char const *what() const throw();
 
       private:
         std::string const _msg;
@@ -46,7 +46,7 @@ class Bureaucrat {
       public:
         GradeTooLowException(std::string const name);
         virtual ~GradeTooLowException() throw();
-        virtual const char *what() const throw();
+        virtual char const *what() const throw();
 
       private:
         std::string const _msg;

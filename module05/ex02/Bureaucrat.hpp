@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 16:19:24 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/27 05:44:24 by dlu              ###   ########.fr       */
+/*   Updated: 2023/07/27 05:47:03 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <exception>
 #include <iostream>
+
+class AForm;
 
 class Bureaucrat {
   public:
@@ -29,12 +31,12 @@ class Bureaucrat {
     unsigned int getGrade(void) const;
     void incrementGrade(void);
     void decrementGrade(void);
+    void signForm(AForm &form);
+    void executeForm(AForm &form);
 
     class GradeTooHighException : public std::exception {
       public:
         GradeTooHighException(std::string const name);
-        // Have to declare virtual destructor with throw()
-        // if there's a custom constructor for some reason
         virtual ~GradeTooHighException() throw();
         virtual char const *what() const throw();
 
