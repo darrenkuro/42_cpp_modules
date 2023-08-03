@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 16:26:27 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/27 03:42:09 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/03 13:46:18 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int main(void) {
     try {
+        // Bureaucrat darren1("Darren1", 0);
+        // Bureaucrat darren2("Darren2", 151);
         Bureaucrat darren("Darren", 150);
         std::cout << darren << std::endl;
         Bureaucrat fred("Fred", 2);
