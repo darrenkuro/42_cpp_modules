@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 02:57:18 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/27 05:50:07 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/03 13:51:48 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char const *Form::GradeTooHighException::what() const throw() {
 Form::GradeTooLowException::GradeTooLowException(std::string const name,
                                                  bool required) {
     if (required)
-        _msg = "Form Exception: required grade too low!";
+        _msg = "Form Exception: " + name + " required grade too low!";
     else
         _msg = name + "'s grade is too low";
 }
