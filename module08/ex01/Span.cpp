@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 19:04:37 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/29 21:31:22 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/08 15:02:43 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ unsigned int Span::shortestSpan(void) const {
 unsigned int Span::longestSpan(void) const {
     if (_container.size() < 2)
         throw SpanNotFoundException();
+
     int ret = std::abs(_container.at(1) - _container.at(0));
     for (std::vector<int>::size_type i = 1; i < _container.size() - 1; i++)
         ret = std::max(std::abs(_container.at(i + 1) - _container.at(i)), ret);

@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:29:14 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/27 10:51:38 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/08 15:03:16 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ class Array {
     class InvalidIndexException : public std::exception {
       public:
         virtual char const *what() const throw() {
-            return "Invalid index: out of bound.";
+            return "Invalid index: out of bound!";
         }
     };
 
