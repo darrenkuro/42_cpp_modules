@@ -6,13 +6,13 @@
 #    By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/10 16:29:29 by dlu               #+#    #+#              #
-#    Updated: 2023/08/04 15:30:05 by dlu              ###   ########.fr        #
+#    Updated: 2023/08/08 14:16:01 by dlu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	:=	identify
-SRC		:=	main.cpp Base.cpp Data.cpp
-HEADER	:=	Base.hpp A.hpp B.hpp C.hpp
+SRC		:=	main.cpp Base.cpp
+HEADER	:=	Base.hpp
 
 CC		:=	c++
 CFLAGS	:=	-Wall -Wextra -Werror -std=c++98

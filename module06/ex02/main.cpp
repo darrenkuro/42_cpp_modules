@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   A.hpp                                              :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/04 15:31:00 by dlu               #+#    #+#             */
-/*   Updated: 2023/08/04 15:31:49 by dlu              ###   ########.fr       */
+/*   Created: 2023/08/08 14:00:11 by dlu               #+#    #+#             */
+/*   Updated: 2023/08/08 14:14:12 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef A_HPP
-#define A_HPP
-
 #include "Base.hpp"
 
-class A : public Base {};
+int main(void) {
+    // Seed random number generator
+    std::srand(static_cast<unsigned int>(std::time(NULL)));
 
-#endif // A_HPP
+    Base *base;
+    Base *base2;
+
+    base = generate();
+    base2 = generate();
+    identify(base);
+    identify(*base);
+    identify(base2);
+    identify(*base2);
+    delete base;
+    delete base2;
+    return 0;
+}
