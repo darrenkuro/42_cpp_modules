@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 07:44:12 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/27 08:44:01 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/20 03:29:36 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,19 @@
 
 ScalarConverter::ScalarConverter() {}
 ScalarConverter::~ScalarConverter() {}
-ScalarConverter::ScalarConverter(ScalarConverter const &t) {}
+ScalarConverter::ScalarConverter(ScalarConverter const &t) { *this = t; }
 
-ScalarConverter &ScalarConverter::operator=(ScalarConverter const &t) {}
+ScalarConverter &ScalarConverter::operator=(ScalarConverter const &t) {
+    (void)t;
+    return *this;
+}
 
-static void convert(std::string const str) {}
-std::ostream &operator<<(std::ostream &os, ScalarConverter const &t) {}
+// char const *ScalarConverter::ImpossibleException::what() const throw() {
+//     return "impossible";
+// }
+// char const *ScalarConverter::NondisplayableException::what() const throw() {
+//     return "Non displayable";
+// }
+e_type ScalarConverter::getType(std::string const str) {}
+
+void ScalarConverter::convert(std::string const str) {}

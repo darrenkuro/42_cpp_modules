@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:29:14 by dlu               #+#    #+#             */
-/*   Updated: 2023/08/08 15:03:16 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/21 22:53:43 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 template <typename T>
 class Array {
   public:
-    Array() : _head(NULL), _size(0);
+    Array() : _head(NULL), _size(0){};
     Array(unsigned int n) : _head(new T[n]), _size(n){};
     ~Array(){delete[] _head};
     Array(Array const &t) : _head(NULL) { *this = t; };
