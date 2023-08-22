@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 14:15:50 by dlu               #+#    #+#             */
-/*   Updated: 2023/08/04 15:17:24 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/22 05:07:10 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #define SERIALIZER_HPP
 
 #include "Data.hpp"
-#include <cstdint>
+// For some reason cstdint wouldn't compile with c++98
+#include <stdint.h>
 
 class Serializer {
   public:
