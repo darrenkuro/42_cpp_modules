@@ -6,23 +6,23 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:29:14 by dlu               #+#    #+#             */
-/*   Updated: 2023/08/22 06:36:20 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/22 16:15:53 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ARRAY_HPP
 #define ARRAY_HPP
 
-#include <exception>
 #include <cstdlib>
+#include <exception>
 
 template <typename T>
 class Array {
   public:
-    Array() : _head(NULL), _size(0){};
+    Array() : _head(new T[0]), _size(0){};
     Array(unsigned int n) : _head(new T[n]), _size(n){};
-    ~Array(){delete[] _head;};
-    Array(Array const &t) : _head(NULL) { *this = t; };
+    ~Array() { delete[] _head; };
+    Array(Array const &t) : _head(new T[0]) { *this = t; };
     Array &operator=(Array const &t) {
         if (this == &t)
             return *this;
@@ -47,7 +47,7 @@ class Array {
         return _head[idx];
     };
 
-    unsigned int size(void) const {return _size;};
+    unsigned int size(void) const { return _size; };
 
     class InvalidIndexException : public std::exception {
       public:

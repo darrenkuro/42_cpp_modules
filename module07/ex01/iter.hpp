@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 09:22:23 by dlu               #+#    #+#             */
-/*   Updated: 2023/08/22 06:25:21 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/22 16:21:55 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ void iter(T *arr, unsigned int length, F f) {
 template <typename T>
 void output(T const &x) {
     std::cout << x << std::endl;
-}
+};
 
 #endif // ITER_HPP
