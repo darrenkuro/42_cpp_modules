@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:29:14 by dlu               #+#    #+#             */
-/*   Updated: 2023/08/21 22:53:43 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/22 06:36:20 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 #define ARRAY_HPP
 
 #include <exception>
+#include <cstdlib>
 
 template <typename T>
 class Array {
   public:
     Array() : _head(NULL), _size(0){};
     Array(unsigned int n) : _head(new T[n]), _size(n){};
-    ~Array(){delete[] _head};
+    ~Array(){delete[] _head;};
     Array(Array const &t) : _head(NULL) { *this = t; };
-    Array &operator(Array const &t) {
+    Array &operator=(Array const &t) {
         if (this == &t)
             return *this;
         if (_head)
@@ -46,7 +47,7 @@ class Array {
         return _head[idx];
     };
 
-    unsigned int size(void) const {return _size};
+    unsigned int size(void) const {return _size;};
 
     class InvalidIndexException : public std::exception {
       public:

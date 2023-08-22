@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 09:22:23 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/27 10:24:37 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/22 06:25:21 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void iter(T *arr, unsigned int length, F f) {
 #include <iostream>
 
 template <typename T>
-void print(T const &x) {
+void output(T const &x) {
     std::cout << x << std::endl;
 }
 
