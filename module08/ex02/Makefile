@@ -6,12 +6,12 @@
 #    By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/10 16:29:29 by dlu               #+#    #+#              #
-#    Updated: 2023/07/29 21:32:49 by dlu              ###   ########.fr        #
+#    Updated: 2023/08/22 05:46:28 by dlu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	:=	stack
-SRC		:=	main.cpp MutantStack.cpp
+SRC		:=	main.cpp
 HEADER	:=	MutantStack.hpp
 
 CC		:=	c++

@@ -6,11 +6,12 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 21:33:25 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/29 21:33:36 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/22 05:42:26 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MutantStack.hpp"
+#include <iostream>
 
 int main() {
     MutantStack<int> mstack;

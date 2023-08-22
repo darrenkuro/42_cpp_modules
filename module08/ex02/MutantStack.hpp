@@ -6,22 +6,27 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 21:33:48 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/29 21:43:35 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/22 05:50:32 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MUTANTSTACK_HPP
 #define MUTANTSTACK_HPP
 
-// class MutantStack : public std::stack<> {
-//   public:
-//     MutantStack();
-//     ~MutantStack();
-//     MutantStack(MutantStack const &t);
+#include <stack>
 
-//     MutantStack &operator=(MutantStack const &t);
+template <typename T>
+class MutantStack : public std::stack<T> {
+  public:
+    MutantStack() {}
+    ~MutantStack() {}
+    MutantStack(MutantStack const &t) { *this = t; }
 
-//   private:
-// };
+    MutantStack &operator=(MutantStack const &t);
+
+    typedef typename std::stack<T>::container_type::iterator iterator;
+    iterator begin() { return this->c.begin(); }
+    iterator end() { return this->c.end(); }
+};
 
 #endif // MUTANTSTACK_HPP
