@@ -6,13 +6,14 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 19:04:35 by dlu               #+#    #+#             */
-/*   Updated: 2023/07/29 21:15:18 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/24 15:51:21 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SPAN_HPP
 #define SPAN_HPP
 
+#include <cstdlib>
 #include <exception>
 #include <vector>
 
