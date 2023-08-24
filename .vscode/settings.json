@@ -76,7 +76,8 @@
 		"utility": "cpp",
 		"numbers": "cpp",
 		"ranges": "cpp",
-		"span": "cpp"
+		"span": "cpp",
+		"list": "cpp"
 	},
 	"editor.minimap.enabled": false,
     "workbench.iconTheme": "material-icon-theme",

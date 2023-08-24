@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 21:33:25 by dlu               #+#    #+#             */
-/*   Updated: 2023/08/24 05:59:27 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/24 16:13:23 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,26 @@ int main() {
         std::cout << *it2 << std::endl;
         ++it2;
     }
+
+    std::cout << "custom tests" << std::endl;
+    MutantStack<int> test = mstack;
+    MutantStack<int>::iterator it3 = test.begin();
+    std::cout << *it3 << std::endl;
+    *it3 = 42;
+    std::cout << *it3 << std::endl;
+    MutantStack<int>::const_iterator cit = test.begin();
+    std::cout << *cit << std::endl;
+    // const means assignment is not allow but iterator itself is allowed to
+    // move
+    //*cit = 42;
+    // std::cout << *cit << std::endl;
+    MutantStack<int>::reverse_iterator it4 = test.rbegin() + 1;
+    std::cout << *it4 << std::endl;
+    *it4 = 42;
+    std::cout << *it4 << std::endl;
+    MutantStack<int>::const_reverse_iterator cit2 = test.rbegin() + 1;
+    std::cout << *cit2 << std::endl;
+    //*cit2 = 42;
+    // std::cout << *cit2 << std::endl;
     return 0;
 }
