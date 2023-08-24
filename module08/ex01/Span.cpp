@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 19:04:37 by dlu               #+#    #+#             */
-/*   Updated: 2023/08/08 15:02:43 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/24 17:16:45 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ Span &Span::operator=(Span const &t) {
     if (t._container.size() > _N)
         throw SpanOverflowException();
     // algorithm method to perform a deep copy
+    // replacement (excess elements would be removed)
     _container.assign(t._container.begin(), t._container.end());
     return *this;
 }
