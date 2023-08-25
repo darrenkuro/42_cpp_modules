@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 15:10:41 by dlu               #+#    #+#             */
-/*   Updated: 2023/08/25 03:12:06 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/25 04:53:40 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ void RPN::printResult(std::string str) {
                 _stack.push(op1 * op2);
                 break;
             case '/':
+                if (op2 == 0)
+                    throw ParsingException();
                 _stack.push(op1 / op2);
                 break;
             }
