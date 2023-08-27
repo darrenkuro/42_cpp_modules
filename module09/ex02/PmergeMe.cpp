@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 15:07:14 by dlu               #+#    #+#             */
-/*   Updated: 2023/08/27 03:52:04 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/27 03:59:03 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,9 @@ unsigned int PmergeMe::jacobsthalNum(unsigned int num) {
     return jacobsthalNum(num - 1) + 2 * jacobsthalNum(num - 2);
 }
 
+/**
+ * Reference: https://en.wikipedia.org/wiki/Merge-insertion_sort
+ */
 std::vector<int> PmergeMe::mergeInsertionSort(std::vector<int> c) {
     if (c.size() < 2)
         return c;
@@ -180,7 +183,7 @@ void PmergeMe::insertion(std::vector<int_pair> &pairs, int size) {
     int i = size - 2;
     while (i >= 0 && pairs[i].second > last.second) {
         pairs[i + 1] = pairs[i];
-        i--;
+        --i;
     }
     pairs[i + 1] = last;
 }
@@ -194,7 +197,7 @@ void PmergeMe::insertion(std::deque<int_pair> &pairs, int size) {
     int i = size - 2;
     while (i >= 0 && pairs[i].second > last.second) {
         pairs[i + 1] = pairs[i];
-        i--;
+        --i;
     }
     pairs[i + 1] = last;
 }
