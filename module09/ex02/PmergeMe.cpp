@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 15:07:14 by dlu               #+#    #+#             */
-/*   Updated: 2023/08/27 03:59:03 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/28 11:54:10 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,22 @@ PmergeMe &PmergeMe::operator=(PmergeMe const &t) {
     return *this;
 }
 
+int PmergeMe::stringToInt(std::string const &str) {
+    std::istringstream iss(str);
+    int value;
+    char remain;
+    if (iss >> value && !(iss >> remain))
+        return value;
+    else
+        throw std::exception();
+}
+
 void PmergeMe::printResult(int count, char **args) {
     // Push elements into containers
     for (int i = 0; i < count; i++) {
         int num;
-        size_t pos;
         try {
-            num = std::stoi(args[i], &pos);
-            if (pos < std::strlen(args[i]))
-                throw ParsingException();
+            num = stringToInt(args[i]);
         } catch (std::exception &e) {
             throw ParsingException();
         }

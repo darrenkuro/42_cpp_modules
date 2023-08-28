@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 14:43:33 by dlu               #+#    #+#             */
-/*   Updated: 2023/08/25 02:15:39 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/28 11:33:41 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define BITCOINEXCHANGE_HPP
 
 #include <algorithm>
+#include <cstdlib>
 #include <exception>
 #include <fstream>
 #include <iostream>

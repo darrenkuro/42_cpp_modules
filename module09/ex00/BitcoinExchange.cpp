@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 14:43:36 by dlu               #+#    #+#             */
-/*   Updated: 2023/08/25 02:19:03 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/28 11:41:00 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ BitcoinExchange &BitcoinExchange::operator=(BitcoinExchange const &t) {
 }
 
 void BitcoinExchange::printResult(std::string const &filename) const {
-    std::ifstream file(filename);
+    std::ifstream file(filename.c_str());
     if (!file.is_open())
         throw FilePermissionException();
 
@@ -41,9 +41,9 @@ void BitcoinExchange::printResult(std::string const &filename) const {
         std::string const valueStr = line.substr(line.find(" | ") + 3);
         try {
             validateDate(date);
-            size_t pos;
-            float const value = std::stof(valueStr, &pos);
-            if (pos < valueStr.length())
+            char *pos;
+            float const value = strtof(valueStr.c_str(), &pos);
+            if (pos == valueStr.c_str() || *pos != '\0')
                 throw std::exception();
             if (value < 0)
                 std::cout << NumNotPositiveException().what() << std::endl;
@@ -66,7 +66,7 @@ void BitcoinExchange::printResult(std::string const &filename) const {
 }
 
 void BitcoinExchange::parseData(std::string const &filename) {
-    std::ifstream file(filename);
+    std::ifstream file(filename.c_str());
     if (!file.is_open())
         throw FilePermissionException();
 
@@ -76,7 +76,8 @@ void BitcoinExchange::parseData(std::string const &filename) {
     while (std::getline(file, line)) {
         std::string date = line.substr(0, line.find(','));
         std::string value = line.substr(line.find(',') + 1);
-        _data.insert(std::pair<std::string, float>(date, std::stof(value)));
+        _data.insert(
+            std::pair<std::string, float>(date, strtof(value.c_str(), NULL)));
     }
     file.close();
 }
@@ -93,9 +94,9 @@ void BitcoinExchange::validateDate(std::string date) const {
             !isAllDigit(monthStr) || !isAllDigit(dayStr))
             throw std::exception();
 
-        int year = std::stoi(yearStr);
-        int month = std::stoi(monthStr);
-        int day = std::stoi(dayStr);
+        int year = atoi(yearStr.c_str());
+        int month = atoi(monthStr.c_str());
+        int day = atoi(dayStr.c_str());
         if (year < 2009 || year > 2023 || month < 1 || month > 12 || day < 1 ||
             day > 31)
             throw std::exception();

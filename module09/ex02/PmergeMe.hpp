@@ -6,7 +6,7 @@
 /*   By: dlu <dlu@student.42berlin.de>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 15:07:16 by dlu               #+#    #+#             */
-/*   Updated: 2023/08/27 03:55:50 by dlu              ###   ########.fr       */
+/*   Updated: 2023/08/28 11:51:19 by dlu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 #define PMERGEME_HPP
 
 #include <algorithm>
+#include <cstring>
 #include <ctime>
 #include <deque>
 #include <iostream>
+#include <sstream>
 #include <vector>
 
 typedef std::pair<int, int> int_pair;
@@ -50,6 +52,7 @@ class PmergeMe {
     std::deque<int> _deque;
 
     unsigned int jacobsthalNum(unsigned int num);
+    int stringToInt(std::string const &str);
 
     // In the manual for some reason (time?) to not generic.
     std::deque<int> mergeInsertionSort(std::deque<int> c);
